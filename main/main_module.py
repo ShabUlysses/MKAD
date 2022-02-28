@@ -40,3 +40,4 @@ def enter_coordinates():
         distance = find_distance_to_polygon(coordinates, mkad)
         current_app.logger.info(f'Расстояние от точек: {lat, lon} до МКАДа составляет {distance} км')
         return f'Расстояние от точек {lat, lon} до МКАДа составляет {distance} км'
+
