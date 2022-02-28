@@ -4,7 +4,7 @@ from decimal import Decimal
 from shapely.geometry import Point
 
 from config import api_key
-from app.geocoder_api import Client
+from app.client import Client
 from app.distance_calculator import find_distance_to_polygon, mkad
 
 

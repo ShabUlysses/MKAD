@@ -9,7 +9,7 @@ from .exceptions import InvalidKey, NothingFound, UnexpectedResponse
 class Client:
     """Yandex geocoder API client.
     :Example:
-        >>> from app.geocoder_api import Client
+        >>> from app import client
         >>> client = Client("your-api-key")
         >>> coordinates = client.transform_to_coordinates("Казань, ул. Чернышевского, 27")
         >>> assert transform_to_coordinates == (Decimal("55.790944"), Decimal("49.107752"))

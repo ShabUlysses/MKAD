@@ -1,7 +1,10 @@
 from decimal import Decimal
 import unittest
+
+from app.client import Client
+from app.exceptions import NothingFound, InvalidKey
 from config import api_key
-from app.geocoder_api import Client, InvalidKey, NothingFound
+
 
 
 class Test(unittest.TestCase):
