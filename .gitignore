@@ -1,4 +1,4 @@
-dir/.idea
-dir/venv
+.idea/
+venv/
 .env
 .log
