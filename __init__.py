@@ -1,6 +1,6 @@
 from flask import Flask
 
-from main.main_module import main
+from app.main_module import main
 
 
 def create_app():

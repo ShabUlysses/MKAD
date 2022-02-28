@@ -1,16 +1,16 @@
 from decimal import Decimal
 from flask import Blueprint, request, current_app
 from shapely.geometry import Point
-from main.distance_calculator import mkad, find_distance_to_polygon
-from configs.config import api_key
+from distance_calculator import mkad, find_distance_to_polygon
+from config import api_key
 from geocoder_api import Client
 import logging
 
-main = Blueprint('main', __name__)
+main = Blueprint('app', __name__)
 
 log = logging.getLogger('werkzeug')
 log.disabled = True
-logging.basicConfig(filename='.log', level='INFO', format='%(message)s')
+logging.basicConfig(filename='../.log', level='INFO', format='%(message)s')
 
 
 @main.route('/', methods=['GET'])

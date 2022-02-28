@@ -1,5 +1,4 @@
-from geocoder_api.client import Client
-from geocoder_api.exceptions import (
+from app.geocoder_api.exceptions import (
     InvalidKey,
     NothingFound,
     UnexpectedResponse,

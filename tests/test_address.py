@@ -1,7 +1,7 @@
 from decimal import Decimal
 import unittest
-from configs.config import api_key
-from geocoder_api import Client, InvalidKey, NothingFound
+from config import api_key
+from app.geocoder_api import Client, InvalidKey, NothingFound
 
 
 class Test(unittest.TestCase):

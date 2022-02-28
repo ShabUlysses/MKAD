@@ -3,9 +3,9 @@ from decimal import Decimal
 
 from shapely.geometry import Point
 
-from configs.config import api_key
-from geocoder_api import Client
-from main.distance_calculator import find_distance_to_polygon, mkad
+from config import api_key
+from app.geocoder_api import Client
+from app.distance_calculator import find_distance_to_polygon, mkad
 
 
 class Test(unittest.TestCase):
@@ -28,3 +28,5 @@ class Test(unittest.TestCase):
         self.assertEqual(mkad.contains(Point((lat, lon))), True) # True if point is inside MKAD
 
 
+if __name__ == '__main__':
+    unittest.main()
