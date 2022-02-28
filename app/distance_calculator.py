@@ -149,7 +149,7 @@ def find_distance_to_polygon(coordinates: Tuple[Decimal, ...], polygon: Polygon 
     The function accepts coordinates as Tuple of two Decimals and Polygon object as arguments.
     Function returns the distance between input point and the closest point of Polygon."""
 
-    def find_distance_between_points(start_coordinates: Tuple[Decimal, ...], end_coordinates: List[float, ...]) -> float:
+    def find_distance_between_points(start_coordinates: Tuple[Decimal, ...], end_coordinates) -> float:
         earth_radius = 6372  # Radius of the Earth in km
         lat_delta = radians(Decimal(end_coordinates[0]) - start_coordinates[0])
         lon_delta = radians(Decimal(end_coordinates[1]) - start_coordinates[1])
