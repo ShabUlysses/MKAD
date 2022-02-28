@@ -56,3 +56,4 @@ class Client:
             raise NothingFound(f'Nothing found for "{latitude} {longitude}"')
 
         return data[0]["GeoObject"]["metaDataProperty"]["GeocoderMetaData"]["text"]
+
