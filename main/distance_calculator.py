@@ -143,8 +143,11 @@ mkad = Polygon([[55.897702887224796, 37.67240905761718], [55.89664192633831, 37.
                 [55.89577793503864, 37.668057876818395], [55.897702887224796, 37.67240905761718]]) # Create a polygon based on coordinates of MKAD
 
 
-def find_distance_to_polygon(coordinates: Tuple[Decimal, ...], polygon: Polygon) -> int:
-    def find_distance_between_points(start_coordinates, end_coordinates):
+def find_distance_to_polygon(coordinates: Tuple[Decimal, Decimal], polygon: Polygon) -> int:
+    """This function calculates the direct distance (not a route between given point and MKAD.
+    The function accepts coordinates as Tuple of two Decimals and Polygon object as arguments.
+    Function returns the distance between input point and the closest point of Polygon."""
+    def find_distance_between_points(start_coordinates, end_coordinates) -> int:
         earth_radius = 6372  # Radius of the Earth in km
         lat_delta = radians(Decimal(end_coordinates[0]) - start_coordinates[0])
         lon_delta = radians(Decimal(end_coordinates[1]) - start_coordinates[1])
