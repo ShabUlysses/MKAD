@@ -1,12 +1,13 @@
 from decimal import Decimal
 import unittest
-from config import api_key
+from configs.config import api_key
 from geocoder_api import Client, InvalidKey, NothingFound
 
 
 class Test(unittest.TestCase):
     """Test cases to see if the address correctly converts to coordinates and vice versa.
     Also basic exceptions are tested"""
+
     def test_if_address_found(self):
         client = Client(api_key)
         self.assertEqual(client.transform_to_coordinates('Калининградская область, '
@@ -33,3 +34,5 @@ class Test(unittest.TestCase):
         self.assertRaises(InvalidKey, client.transform_to_coordinates, 'Красная площадь')
 
 
+if __name__ == '__main__':
+    unittest.main()

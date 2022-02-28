@@ -2,7 +2,7 @@ from decimal import Decimal
 from flask import Blueprint, request, current_app
 from shapely.geometry import Point
 from main.distance_calculator import mkad, find_distance_to_polygon
-from config import api_key
+from configs.config import api_key
 from geocoder_api import Client
 import logging
 

@@ -11,10 +11,10 @@ class Client:
     :Example:
         >>> from geocoder_api import Client
         >>> client = Client("your-api-key")
-        >>> coordinates = client.transform_to_coordinates("Москва Льва Толстого 16")
-        >>> assert transform_to_coordinates == (Decimal("37.587093"), Decimal("55.733969"))
-        >>> address = client.address(Decimal("37.587093"), Decimal("55.733969"))
-        >>> assert address == "Россия, Москва, улица Льва Толстого, 16"
+        >>> coordinates = client.transform_to_coordinates("Казань, ул. Чернышевского, 27")
+        >>> assert transform_to_coordinates == (Decimal("55.790944"), Decimal("49.107752"))
+        >>> address = client.address(Decimal("55.790944"), Decimal("49.107752"))
+        >>> assert address == 'Россия, Республика Татарстан, Казань, улица Чернышевского, 27'
     """
 
     def __init__(self, api_key: str):
