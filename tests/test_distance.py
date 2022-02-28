@@ -10,3 +10,4 @@ class Test(unittest.TestCase):
         coordinates = client.transform_to_coordinates('Можайск')
         self.assertEqual(find_distance_to_polygon(coordinates), 88)
 
+
