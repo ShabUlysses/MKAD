@@ -3,9 +3,9 @@ from decimal import Decimal
 
 from shapely.geometry import Point
 
-from config import api_key
 from app.client import Client
 from app.distance_calculator import find_distance_to_polygon, mkad
+from config import api_key
 
 
 class Test(unittest.TestCase):
@@ -21,11 +21,11 @@ class Test(unittest.TestCase):
     def test_address_inside_mkad(self):
         client = Client(api_key)
         coordinates = client.transform_to_coordinates('Красная площадь')
-        self.assertEqual(mkad.contains(Point(coordinates)), True) # True if point is inside MKAD
+        self.assertEqual(mkad.contains(Point(coordinates)), True)  # True if point is inside MKAD
 
     def test_coordinates_inside_mkad(self):
         lat, lon = Decimal(55.778892), Decimal(37.59542)
-        self.assertEqual(mkad.contains(Point((lat, lon))), True) # True if point is inside MKAD
+        self.assertEqual(mkad.contains(Point((lat, lon))), True)  # True if point is inside MKAD
 
 
 if __name__ == '__main__':

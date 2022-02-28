@@ -1,4 +1,3 @@
-
 class YandexGeocoderException(Exception):
     pass
 

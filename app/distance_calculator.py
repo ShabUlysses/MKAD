@@ -1,9 +1,8 @@
 from decimal import Decimal
-from typing import Tuple
 from math import radians, sin, cos, atan2, sqrt
+from typing import Tuple, List
+
 from shapely.geometry import Polygon
-
-
 
 mkad = Polygon([[55.897702887224796, 37.67240905761718], [55.89664192633831, 37.6752414703369],
                 [55.89591852721012, 37.67807388305662], [55.8956291637662, 37.6829662322998],
@@ -141,14 +140,16 @@ mkad = Polygon([[55.897702887224796, 37.67240905761718], [55.89664192633831, 37.
                 [55.90870067235796, 37.594071823351584], [55.90720609923871, 37.6005949556758],
                 [55.90508467033431, 37.60797639488478], [55.90064857878059, 37.626687484972685],
                 [55.89789987512875, 37.64428277611039], [55.89621197772044, 37.65990396141311],
-                [55.89577793503864, 37.668057876818395], [55.897702887224796, 37.67240905761718]]) # Create a polygon based on coordinates of MKAD
+                [55.89577793503864, 37.668057876818395],
+                [55.897702887224796, 37.67240905761718]])  # Create a polygon based on coordinates of MKAD
 
 
 def find_distance_to_polygon(coordinates: Tuple[Decimal, ...], polygon: Polygon = mkad) -> int:
     """This function calculates the direct distance (not a route between given point and MKAD.
     The function accepts coordinates as Tuple of two Decimals and Polygon object as arguments.
     Function returns the distance between input point and the closest point of Polygon."""
-    def find_distance_between_points(start_coordinates, end_coordinates) -> int:
+
+    def find_distance_between_points(start_coordinates: Tuple[Decimal, ...], end_coordinates: List[float, ...]) -> float:
         earth_radius = 6372  # Radius of the Earth in km
         lat_delta = radians(Decimal(end_coordinates[0]) - start_coordinates[0])
         lon_delta = radians(Decimal(end_coordinates[1]) - start_coordinates[1])
@@ -167,4 +168,3 @@ def find_distance_to_polygon(coordinates: Tuple[Decimal, ...], polygon: Polygon 
         if temp_distance < distance:
             distance = temp_distance
     return round(distance)
-

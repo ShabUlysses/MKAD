@@ -1,10 +1,12 @@
+import logging
 from decimal import Decimal
+
 from flask import Blueprint, request, current_app
 from shapely.geometry import Point
-from .distance_calculator import mkad, find_distance_to_polygon
+
 from config import api_key
 from .client import Client
-import logging
+from .distance_calculator import mkad, find_distance_to_polygon
 
 main = Blueprint('app', __name__)
 
@@ -40,4 +42,3 @@ def enter_coordinates():
         distance = find_distance_to_polygon(coordinates, mkad)
         current_app.logger.info(f'Расстояние от точек: {lat, lon} до МКАДа составляет {distance} км')
         return f'Расстояние от точек {lat, lon} до МКАДа составляет {distance} км'
-

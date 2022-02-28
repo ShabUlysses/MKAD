@@ -1,10 +1,9 @@
-from decimal import Decimal
 import unittest
+from decimal import Decimal
 
 from app.client import Client
 from app.exceptions import NothingFound, InvalidKey
 from config import api_key
-
 
 
 class Test(unittest.TestCase):
