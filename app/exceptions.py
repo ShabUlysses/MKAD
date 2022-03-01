@@ -12,3 +12,4 @@ class NothingFound(YandexGeocoderException):
 
 class InvalidKey(YandexGeocoderException):
     pass
+
