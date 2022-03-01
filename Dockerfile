@@ -2,9 +2,7 @@
 FROM python:3.8-slim-buster
 WORKDIR /MKAD
 COPY requirements.txt requirements.txt
+COPY . .
 RUN pip3 install -r requirements.txt
-COPY ./app
-COPY config.py config.py
-COPY run.py run.py
 ENTRYPOINT ["python"]
-CMD ["run.py"]
+CMD ["run.py", "--host:0.0.0.1"]
