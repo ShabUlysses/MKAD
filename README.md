@@ -67,12 +67,12 @@ $ python -m unittest
 
 To create docker-image:
 ```
-$ docker build -t <name:tag>
+$ docker build -t <name:tag> .
 ```
 
 To run a container:
 ```
-$ docker -d -p 5000:5000
+$ docker run -d -p 5000:5000 <image_name>
 ```
 
 
