@@ -15,7 +15,11 @@ log.disabled = True
 logging.basicConfig(filename='../.log', level='INFO', format='%(message)s')
 
 
-@main.route('/', methods=['GET'])
+@main.route('/')
+def welcome_page():
+    return '''С помощью данного приложения возможно рассчитать прямое расстояние от заданной точки до МКАД.'''
+
+
 @main.route('/address', methods=['GET'])
 def enter_address():
     address = request.args.get('address')
