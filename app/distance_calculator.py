@@ -1,6 +1,6 @@
 from decimal import Decimal
 from math import radians, sin, cos, atan2, sqrt
-from typing import Tuple, List
+from typing import Tuple
 
 from shapely.geometry import Polygon
 
