@@ -1,16 +1,18 @@
-Installation
+**Installation**
 
 First, clone this repository.
 
-$ git clone http://github.com/ShabUlysses/MKAD
+`$ git clone http://github.com/ShabUlysses/MKAD
 $ cd flask-app-template
-
+`
 After, install all necessary to run:
 
-$ pipenv install
+`$ pipenv install`
+
 Than, run the application:
 
-$ pipenv run python run.py
+`$ pipenv run python run.py`
+
 To see your application, access this url in your browser:
 
 http://localhost:5000
