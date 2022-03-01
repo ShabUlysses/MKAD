@@ -63,7 +63,7 @@ To run tests:
 $ python -m unittest
 ```
 
-## Tests
+## Docker
 
 To create docker-image:
 ```
