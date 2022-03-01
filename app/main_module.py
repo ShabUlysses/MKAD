@@ -11,7 +11,7 @@ from .distance_calculator import mkad, find_distance_to_polygon
 main = Blueprint('app', __name__)
 
 log = logging.getLogger('werkzeug')
-log.disabled = True
+log.disabled = True  # Setting the logging to save only results of http query
 logging.basicConfig(filename='../.log', level='INFO', format='%(message)s')
 
 

@@ -150,6 +150,8 @@ def find_distance_to_polygon(coordinates: Tuple[Decimal, ...], polygon: Polygon 
     Function returns the distance between input point and the closest point of Polygon."""
 
     def find_distance_between_points(start_coordinates: Tuple[Decimal, ...], end_coordinates) -> float:
+        """The distance between two geographical points is calculated using Haversine formula"""
+
         earth_radius = 6372  # Radius of the Earth in km
         lat_delta = radians(Decimal(end_coordinates[0]) - start_coordinates[0])
         lon_delta = radians(Decimal(end_coordinates[1]) - start_coordinates[1])
@@ -160,7 +162,7 @@ def find_distance_to_polygon(coordinates: Tuple[Decimal, ...], polygon: Polygon 
 
         c = 2 * atan2(sqrt(a), sqrt(1 - a))
 
-        return earth_radius * c  # distance in km
+        return earth_radius * c  # return distance in km
 
     distance = 20035  # The biggest posssible distance between two points on Earth
     for point in polygon.exterior.coords:

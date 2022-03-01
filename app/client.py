@@ -36,7 +36,7 @@ class Client:
             )
 
     def transform_to_coordinates(self, address: str) -> Tuple[Decimal, ...]:
-        """Fetch coordinates (longitude, latitude) for passed address."""
+        """Fetch coordinates (latitude, longitude) for passed address."""
         data = self._request(address)["GeoObjectCollection"]["featureMember"]
 
         if not data:
