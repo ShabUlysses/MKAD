@@ -63,5 +63,17 @@ To run tests:
 $ python -m unittest
 ```
 
+## Tests
+
+To create docker-image:
+```
+$ docker build -t <name:tag>
+```
+
+To run a container:
+```
+$ docker -d -p 5000:5000
+```
+
 
 
