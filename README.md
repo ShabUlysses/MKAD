@@ -2,20 +2,21 @@
 
 First, clone this repository.
 
-``
+`
 $ git clone http://github.com/ShabUlysses/MKAD
-``
+`
 
 `
 $ cd MKAD
 `
+
 After, install all necessary to run:
 
 `
 $ pip install -r requirements.txt
 `
 
-Than, run the application:
+Then, run the application:
 
 `
 $ pipenv run python run.py
