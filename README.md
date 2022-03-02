@@ -7,17 +7,17 @@ This application allows you to calculate the direct distance from inputed locati
 First, clone this repository.
 
 ```
-$ git clone http://github.com/ShabUlysses/MKAD
+git clone http://github.com/ShabUlysses/MKAD
 ```
 
 ```
-$ cd MKAD
+cd MKAD
 ```
 
 Then, install plugins and packages that are necessary for this project to run:
 
 ```
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 Yandex Geocoder requires an API developer key, you can get it [here](https://yandex.ru/dev/maps/geocoder/doc/desc/concepts/about.html) to use this library.
@@ -31,7 +31,7 @@ api_key = 'your_api_key_here'
 Then, run the application:
 
 ```
-$ python run.py
+python run.py
 ```
 
 To see application, access this url in your browser:
@@ -60,19 +60,19 @@ http://localhost:5000/coords?lat=50&lon=50
 
 To run tests:
 ```
-$ python -m unittest
+python -m unittest
 ```
 
 ## Docker
 
 To create docker-image:
 ```
-$ docker build -t <name:tag> .
+docker build -t <name:tag> .
 ```
 
 To run a container:
 ```
-$ docker run -d -p 5000:5000 <image_name>
+docker run -d -p 5000:5000 <image_name>
 ```
 
 
