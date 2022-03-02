@@ -164,9 +164,9 @@ def find_distance_to_polygon(coordinates: Tuple[Decimal, ...], polygon: Polygon 
 
         return earth_radius * c  # return distance in km
 
-    distance = 20035  # The biggest posssible distance between two points on Earth
-    for point in polygon.exterior.coords:
+    distance = 20035  # The biggest possible distance between two points on Earth
+    for point in polygon.exterior.coords:  # Run a cycle through points in polygon
         temp_distance = find_distance_between_points(coordinates, point)
-        if temp_distance < distance:
+        if temp_distance < distance:  # Find the shortest distance from given location to polygon
             distance = temp_distance
     return round(distance)
