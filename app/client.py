@@ -21,6 +21,8 @@ class Client:
         self.api_key = api_key
 
     def _request(self, address: str) -> dict:
+        """This class method connects to yandex-geocoder API.
+         It passes format, apikey and geocode as parameters for http-query"""
         response = requests.get(
             "https://geocode-maps.yandex.ru/1.x/",
             params=dict(format="json", apikey=self.api_key, geocode=address),

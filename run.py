@@ -3,9 +3,9 @@ from flask import Flask
 from app.main_module import main
 
 
-def create_app():
+def create_app():  # Create application with Flask
     app = Flask(__name__)
-    app.register_blueprint(main)
+    app.register_blueprint(main)  # Register blueprint
     return app
 
 
