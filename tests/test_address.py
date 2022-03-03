@@ -1,7 +1,7 @@
 import unittest
 from decimal import Decimal
 
-from app.client import Client
+from app.geocoder import Client
 from app.exceptions import NothingFound, InvalidKey
 from config import api_key
 
