@@ -145,7 +145,7 @@ mkad = Polygon([[55.897702887224796, 37.67240905761718], [55.89664192633831, 37.
 
 
 def find_distance_to_polygon(coordinates: Tuple[Decimal, ...], polygon: Polygon = mkad) -> int:
-    """This function calculates the direct distance (not a route between given point and MKAD.
+    """This function calculates the direct distance (not a route between given point and MKAD).
     The function accepts coordinates as Tuple of two Decimals and Polygon object as arguments.
     Function returns the distance between input point and the closest point of Polygon."""
 
