@@ -32,7 +32,7 @@ def enter_address():
         current_app.logger.info(f'{address} находится внутри МКАДа')
         return '''Точка находится внутри МКАДа!'''
     else:
-        distance = find_distance_to_polygon(coordinates, mkad)  # Calculate the distance
+        distance = find_distance_to_polygon(coordinates, mkad)
         current_app.logger.info(f'Расстояние от точки "{address}" до МКАДа составляет {distance} км')
         return f'Расстояние от точки: "{address}" до МКАДа составляет {distance} км'
 
@@ -49,6 +49,6 @@ def enter_coordinates():
         current_app.logger.info(f'Точка {lat, lon} находится внутри МКАДа')
         return '''Точка находится внутри МКАДа!'''
     else:
-        distance = find_distance_to_polygon(coordinates, mkad)  # Calculate the distance
+        distance = find_distance_to_polygon(coordinates, mkad)
         current_app.logger.info(f'Расстояние от точек: {lat, lon} до МКАДа составляет {distance} км')
         return f'Расстояние от точек {lat, lon} до МКАДа составляет {distance} км'
